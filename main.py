@@ -6,17 +6,16 @@ class Archer:
         
 
     def take_hit(self):
-    
+        self.health -= 1
         if self.health <= 0:            
             raise Exception (f"{self.name} is dead")
-            self.health -= 1
-
         
+
     def shoot(self, target):
         if self.num_arrows <= 0:
            raise Exception (f"{self.name} can't shoot")
-           self.num_arrows -= 1
-           target.take_hit()
+        self.num_arrows -= 1
+        target.take_hit()
 
     # don't touch below this line
 
